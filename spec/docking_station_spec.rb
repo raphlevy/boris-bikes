@@ -9,8 +9,10 @@ describe DockingStation do
     expect(bike).to be_working
   end
 
-  it "will return an error message" do
-    expect{subject.release_bike}.to raise_error(RuntimeError)
+  describe '#release_bike' do
+    it "will return an error message when no bikes" do
+      expect{subject.release_bike}.to raise_error 'No bikes available'
+    end
   end
 
   it { is_expected.to respond_to(:dock).with(1).argument}
