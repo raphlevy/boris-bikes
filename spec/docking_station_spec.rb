@@ -8,5 +8,8 @@ describe DockingStation do
 end
 
 describe Bike do
-  it { is_expected.to respond_to :working?}
+  it 'to be wokring' do
+    expect(subject.working?).to be true
+  end
+
 end
