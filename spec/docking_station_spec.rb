@@ -8,4 +8,9 @@ describe DockingStation do
     bike = subject.release_bike
     expect(bike).to be_working
   end
+
+  it "will return an error message" do
+    expect{subject.release_bike}.to raise_error(RuntimeError)
+  end
+
 end
