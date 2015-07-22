@@ -13,4 +13,6 @@ describe DockingStation do
     expect{subject.release_bike}.to raise_error(RuntimeError)
   end
 
+  it { is_expected.to respond_to(:dock).with(1).argument}
+
 end
