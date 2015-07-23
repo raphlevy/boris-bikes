@@ -30,4 +30,13 @@ describe DockingStation do
 
   end
 
+  describe '#capacity' do
+
+    it 'testing for a different capacity than default' do
+      station = DockingStation.new 50
+      expect(station.capacity).to eq 50
+    end
+  end
+
+
 end
