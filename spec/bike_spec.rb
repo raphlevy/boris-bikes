@@ -7,14 +7,14 @@ describe Bike do
 
 
      describe '#report_broken' do
-			  it 'test if report_broken exists' do
-			  	expect(subject).to respond_to :report_broken
-			  end
+			it 'test if report_broken exists' do
+				expect(subject).to respond_to :report_broken
+			end
 
-			  it 'test report_broken is working' do
-		      subject.report_broken
-		      expect(subject.broken?).to eq true
-				end
+			it 'test report_broken is working' do
+			  subject.report_broken
+			  expect(subject).to be_broken
+			end
      end
 
 

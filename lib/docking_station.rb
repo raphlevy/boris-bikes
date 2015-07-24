@@ -12,8 +12,9 @@ def initialize (capacity = DEFAULT_CAPACITY)
 end
 
   def release_bike
-  	 raise 'No bikes available' if empty?
-  	 @bike.pop
+  	 raise 'No bikes available' if empty? 
+  	 raise 'The bike is broken and cannot be released' if @bike.last.broken? == true
+     @bike.pop
   end
 
   def dock bike

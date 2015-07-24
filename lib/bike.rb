@@ -5,7 +5,7 @@ def intialize
 end
 
   def working?
-  true unless @broken = true
+  !broken?
   end
 
   def report_broken 
